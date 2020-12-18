@@ -8,6 +8,7 @@
   height: 100%;
   width: 50%;
 
+
   margin: 0 auto;
   align-items: center;
   flex-direction: column;  
@@ -16,7 +17,7 @@
 
 .containerTexto {
   height: 93.7vh;
-  background-color: pink;
+  background-color: #e5ddd5;
 
 }
 
