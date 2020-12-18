@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css';
 import Msg from './Msg/Msg'
-import { useRef } from 'react';
-import useDoubleClick from 'use-double-click';
+// import { useRef } from 'react';
+// import useDoubleClick from 'use-double-click';
 
 // export default deletarMensagem()
 
@@ -21,13 +21,14 @@ class App extends React.Component {
     console.log("doubleClicando")
     console.log(item)
     const mensagensAtuais = this.state.mensagens;
+    if(window.confirm("Deseja deletar a mensagem?")){
     const novaLista = mensagensAtuais.filter((valor) => {
       console.log(valor)
-
-      return !(valor.nome === item.nome && valor.mensagem === item.mensagem) ;
+        return !(valor.nome === item.nome && valor.mensagem === item.mensagem);
       });
-    console.log(novaLista)
-    this.setState({ mensagens: novaLista });
+      console.log(novaLista)
+      this.setState({ mensagens: novaLista });
+    }
 
   }
 
@@ -101,4 +102,3 @@ class App extends React.Component {
 }
 
 export default App;
-// export default deletarMensagem()
